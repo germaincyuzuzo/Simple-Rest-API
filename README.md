@@ -15,15 +15,15 @@ server but the data they are trying to access is not found.
 
 Example Demo (Using Curl)
 
-INSERTING USER USING THE POST ENDPOINT
+INSERTING USER USING THE POST ENDPOINT (Instantly shows the inserted data upon success)
 
 germain@fedora:~/Works/python/projects/Simple-Rest-API$ curl -X POST http://localhost:5000/users \
      -H "Content-Type: application/json" \
-     -d '{"name": "Alice", "email": "alice@example.com"}'
+     -d '{"name": "Germain", "email": "germain@gmail.com"}'
 {
-  "email": "alice@example.com",
+  "email": "germain@gmail.com",
   "id": "f2ab35f8-7417-4af2-85f8-996814ffa210",
-  "name": "Alice"
+  "name": "Germain"
 }
 
 TRYING TO INSERT USER WITH SOME MISSING CREDENTIALS (RETURNS AN ERROR)
@@ -38,9 +38,9 @@ GETTING USER USING THE GET ENDPOINT
 
 germain@fedora:~/Works/python/projects/Simple-Rest-API$ curl http://localhost:5000/users/f2ab35f8-7417-4af2-85f8-996814ffa210
 {
-  "email": "alice@example.com",
+  "email": "germain@gmail.com",
   "id": "f2ab35f8-7417-4af2-85f8-996814ffa210",
-  "name": "Alice"
+  "name": "Germain"
 }
 
 TRYING TO GET A USER WITH AN ID THAT DOESN'T EXIST (RETURNS AN ERROR)
